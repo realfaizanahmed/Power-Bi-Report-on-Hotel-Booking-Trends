@@ -1,0 +1,13 @@
+GOAL: Develop a DataBase to analyze & visualize Hotel Booking Data.
+
+REQUIREMENTS: Build a visual data story or dashboard using power bi to present to your stakeholders.
+
+1) Is hotel revenue growing by year.
+
+2) Should we increase our parking lot size?
+
+3) What trends can we see in the data?
+
+
+Select arrival_date_year,hotel,
+round(SUM((stays_in_week_nights + stays_in_weekend_nights) * adr),2) as revenue from hotels group by arrival_date_year,hotel
